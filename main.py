@@ -1,8 +1,5 @@
-from bs4 import  BeautifulSoup
-import requests
 import time
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from fake_useragent import UserAgent
 import json
@@ -17,7 +14,7 @@ def get_data_with_selenium(url):
     driver = webdriver.Chrome(executable_path=r"chromedriver.exe",
                               options=options)
     driver.get(url=url)
-    # time.sleep(2)
+    time.sleep(2)
 
     return driver
 
